@@ -22,18 +22,8 @@ struct PhoneContacts: View {
     
     var body: some View {
         List(phones, id: \.id) { phone in
-           
-                HStack {
-                Image("avatar").resizable().frame(width: 100, height: 100, alignment: .center).clipShape(Circle())
-                VStack(alignment: .leading) {
-                    Spacer()
-                    Text(phone.name).font(.title)
-                    Spacer()
-                    Text(phone.phone)
-                    Spacer()
-                }
-                Spacer()
-                Image(systemName: "chevron.right")
+            NavigationLink(destination: ContractDetail()) {
+                ContactRow(phone: phone)
             }
         }
     }
