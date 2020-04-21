@@ -1,27 +1,42 @@
 import SwiftUI
-
-struct Phone {
-    var id: String
-    var name: String
-    var phone: String
-}
+import ContactsUI
 
 struct PhoneContacts: View {
-    var phones: [Phone] = [
-        Phone(id: "1", name: "test1", phone: "23423432"),
-        Phone(id: "2", name: "test2", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-        Phone(id: "3", name: "test3", phone: "23423432"),
-    ]
+    var phones: [PhoneContact] = [PhoneContact]()
+    
+    init() {
+        let status = CNContactStore.authorizationStatus(for: .contacts)
+        
+        if status == .notDetermined {
+            let contactStore = CNContactStore();
+            contactStore.requestAccess(for: .contacts) { (granted: Bool, error: Error?) in
+                if granted {
+                    print("success")
+                }
+            }
+        }
+        self.phones = self.fetchPhoneContacts();
+    }
+    
+    mutating func fetchPhoneContacts() -> [PhoneContact] {
+        let contactStore = CNContactStore()
+        
+        let contractFetchRequest = CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey as CNKeyDescriptor, CNContactFamilyNameKey as CNKeyDescriptor, CNContactMiddleNameKey as CNKeyDescriptor, CNContactEmailAddressesKey as CNKeyDescriptor ,CNContactPhoneNumbersKey as CNKeyDescriptor])
+        var contacts: [PhoneContact] = [PhoneContact]()
+        do {
+            try contactStore.enumerateContacts(with: contractFetchRequest, usingBlock: {
+                (contact, error) -> Void in
+                contacts.append(PhoneContact.init(contact: contact))
+            })
+        } catch _ as NSError {
+            print("error")
+        }
+        
+        return contacts
+    }
     
     var body: some View {
-        List(phones, id: \.id) { phone in
+        List(phones, id: \.name) { phone in
             NavigationLink(destination: ContractDetail()) {
                 ContactRow(phone: phone)
             }
