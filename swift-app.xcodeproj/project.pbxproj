@@ -22,7 +22,7 @@
 		2E51F6EA244D918F004532D9 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6E9244D918F004532D9 /* PhoneContact.swift */; };
 		2E51F6F5244FF80D004532D9 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6F4244FF80D004532D9 /* CameraView.swift */; };
 		2E51F6F924502D30004532D9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6F824502D30004532D9 /* ImagePicker.swift */; };
-		2E51F6FB245035CF004532D9 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6FA245035CF004532D9 /* PhotoCaptureView.swift */; };
+		2E51F6FB245035CF004532D9 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6FA245035CF004532D9 /* CameraButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		2E51F6E9244D918F004532D9 /* PhoneContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContact.swift; sourceTree = "<group>"; };
 		2E51F6F4244FF80D004532D9 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		2E51F6F824502D30004532D9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		2E51F6FA245035CF004532D9 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		2E51F6FA245035CF004532D9 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +187,7 @@
 			children = (
 				2E51F6F4244FF80D004532D9 /* CameraView.swift */,
 				2E51F6F824502D30004532D9 /* ImagePicker.swift */,
-				2E51F6FA245035CF004532D9 /* PhotoCaptureView.swift */,
+				2E51F6FA245035CF004532D9 /* CameraButtonView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 				2E51F6E5244D8E08004532D9 /* ContractDetail.swift in Sources */,
 				2E51F6F5244FF80D004532D9 /* CameraView.swift in Sources */,
 				2E51F6EA244D918F004532D9 /* PhoneContact.swift in Sources */,
-				2E51F6FB245035CF004532D9 /* PhotoCaptureView.swift in Sources */,
+				2E51F6FB245035CF004532D9 /* CameraButtonView.swift in Sources */,
 				2E51F6E3244D8AED004532D9 /* PhoneContacts.swift in Sources */,
 				2E51F6B6244D8AC9004532D9 /* ContentView.swift in Sources */,
 				2E51F6F924502D30004532D9 /* ImagePicker.swift in Sources */,
