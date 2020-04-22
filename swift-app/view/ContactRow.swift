@@ -10,7 +10,7 @@ struct ContactRow: View {
                Spacer()
             Text(phone.name! as String)
                Spacer()
-            Text(phone.phoneNumber.joined())
+            Text(phone.phoneNumber[1])
                Spacer()
            }
         }

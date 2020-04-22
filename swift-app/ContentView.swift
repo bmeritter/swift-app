@@ -6,7 +6,9 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            PhoneContacts()
+            NavigationLink(destination: PhoneContacts()) {
+                Text("通讯录")
+            }
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
