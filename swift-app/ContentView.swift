@@ -8,8 +8,9 @@ struct ContentView: View {
         NavigationView {
             NavigationLink(destination: PhoneContacts()) {
                 Text("通讯录")
-            }
+            }.navigationBarTitle("首页")
         }.navigationViewStyle(StackNavigationViewStyle())
+            
     }
 }
 

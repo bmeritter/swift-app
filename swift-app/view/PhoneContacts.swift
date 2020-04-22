@@ -37,10 +37,10 @@ struct PhoneContacts: View {
     
     var body: some View {
         List(phones, id: \.name) { phone in
-            NavigationLink(destination: ContractDetail()) {
-                ContactRow(phone: phone)
-            }
-        }
+           NavigationLink(destination: ContractDetail(phone: phone)) {
+               ContactRow(phone: phone)
+           }.navigationBarTitle("List")
+       }
     }
 }
 
