@@ -9,8 +9,22 @@
 import SwiftUI
 
 struct CameraView: View {
+    @State private var showImagePicker: Bool = false
+    @State private var image: Image? = nil
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            image?.resizable().scaledToFit()
+            
+            Button("Open Camera") {
+                self.showImagePicker = true
+            }.padding().background(Color.gray)
+                .foregroundColor(Color.white)
+            .cornerRadius(10)
+            
+        }.sheet(isPresented: $showImagePicker) {
+            PhotoCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
+        }
     }
 }
 
