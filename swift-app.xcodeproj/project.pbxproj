@@ -20,6 +20,7 @@
 		2E51F6E5244D8E08004532D9 /* ContractDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6E4244D8E08004532D9 /* ContractDetail.swift */; };
 		2E51F6E7244D8EC8004532D9 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6E6244D8EC8004532D9 /* ContactRow.swift */; };
 		2E51F6EA244D918F004532D9 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6E9244D918F004532D9 /* PhoneContact.swift */; };
+		2E51F6F5244FF80D004532D9 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51F6F4244FF80D004532D9 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2E51F6E4244D8E08004532D9 /* ContractDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDetail.swift; sourceTree = "<group>"; };
 		2E51F6E6244D8EC8004532D9 /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		2E51F6E9244D918F004532D9 /* PhoneContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContact.swift; sourceTree = "<group>"; };
+		2E51F6F4244FF80D004532D9 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +154,8 @@
 		2E51F6E1244D8AD7004532D9 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				2E51F6E2244D8AED004532D9 /* PhoneContacts.swift */,
-				2E51F6E4244D8E08004532D9 /* ContractDetail.swift */,
-				2E51F6E6244D8EC8004532D9 /* ContactRow.swift */,
+				2E51F6F3244FF7FE004532D9 /* Camera */,
+				2E51F6F2244FF7E7004532D9 /* PhoneContact */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -165,6 +166,24 @@
 				2E51F6E9244D918F004532D9 /* PhoneContact.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		2E51F6F2244FF7E7004532D9 /* PhoneContact */ = {
+			isa = PBXGroup;
+			children = (
+				2E51F6E2244D8AED004532D9 /* PhoneContacts.swift */,
+				2E51F6E4244D8E08004532D9 /* ContractDetail.swift */,
+				2E51F6E6244D8EC8004532D9 /* ContactRow.swift */,
+			);
+			path = PhoneContact;
+			sourceTree = "<group>";
+		};
+		2E51F6F3244FF7FE004532D9 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				2E51F6F4244FF80D004532D9 /* CameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +320,7 @@
 				2E51F6AF244D8AC9004532D9 /* AppDelegate.swift in Sources */,
 				2E51F6B4244D8AC9004532D9 /* swift_app.xcdatamodeld in Sources */,
 				2E51F6E5244D8E08004532D9 /* ContractDetail.swift in Sources */,
+				2E51F6F5244FF80D004532D9 /* CameraView.swift in Sources */,
 				2E51F6EA244D918F004532D9 /* PhoneContact.swift in Sources */,
 				2E51F6E3244D8AED004532D9 /* PhoneContacts.swift in Sources */,
 				2E51F6B6244D8AC9004532D9 /* ContentView.swift in Sources */,

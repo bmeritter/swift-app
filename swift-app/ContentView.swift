@@ -6,9 +6,17 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            NavigationLink(destination: PhoneContacts()) {
-                Text("通讯录")
-            }.navigationBarTitle("首页")
+            HStack {
+                 Spacer()
+                NavigationLink(destination: PhoneContacts()) {
+                    Text("Contact")
+                }
+                Spacer()
+                NavigationLink(destination: CameraView()) {
+                    Text("Camera")
+                }
+                Spacer()
+            }
         }.navigationViewStyle(StackNavigationViewStyle())
             
     }
