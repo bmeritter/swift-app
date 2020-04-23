@@ -8,7 +8,7 @@ class PhoneContact: NSObject {
     var email: [String] = [String()]
     
     init(contact: CNContact) {
-        print(contact)
+//        print(contact)
         name = contact.familyName + " " + contact.givenName
         
         for number in contact.phoneNumbers {
