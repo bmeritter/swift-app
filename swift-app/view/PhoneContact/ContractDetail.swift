@@ -8,11 +8,9 @@ struct ContractDetail: View {
         VStack {
             Text(phone.name! as String)
             Button(action: {
-                let dash = CharacterSet(charactersIn: "-")
-
-                let cleanString =
-                   "13152486382".trimmingCharacters(in: dash)
-
+                let number = self.phone.phoneNumber[1] as String
+                
+                let cleanString = number.replacingOccurrences(of: " ", with: "")
                 let formattedString: String = "tel://" + cleanString
                 let url: URL = URL(string: formattedString)!
                 

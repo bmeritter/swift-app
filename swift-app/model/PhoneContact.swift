@@ -12,6 +12,8 @@ class PhoneContact: NSObject {
         name = contact.familyName + " " + contact.givenName
         
         for number in contact.phoneNumbers {
+            print(number)
+            print(number.value.stringValue)
             phoneNumber.append(number.value.stringValue)
         }
         
