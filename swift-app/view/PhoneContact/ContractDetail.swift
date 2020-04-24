@@ -8,19 +8,25 @@ struct ContractDetail: View {
         VStack {
             Text(phone.name! as String)
             Button(action: {
-                // validation of phone number not included
                 let dash = CharacterSet(charactersIn: "-")
 
                 let cleanString =
-                   (self.phone.phoneNumber[1] as String).trimmingCharacters(in: dash)
+                   "13152486382".trimmingCharacters(in: dash)
 
-                let tel = "tel://"
-                let formattedString = tel + cleanString
-                let url: NSURL = NSURL(string: formattedString)!
-                print(url)
+                let formattedString: String = "tel://" + cleanString
+                let url: URL = URL(string: formattedString)!
+                
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: {
+                        (success) in
+                        print("success", success)
+                    })
+                }
 
-                UIApplication.shared.open(url as URL)
-            }){
+                
+            
+            }
+            ){
                 Text(phone.phoneNumber[1])
             }
         }.navigationBarTitle("详情")
